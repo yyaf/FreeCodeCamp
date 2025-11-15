@@ -4,18 +4,19 @@ def update_progress(md_file="readme.md"):
     # 读取 Markdown 文件
     with open(md_file, "r", encoding="utf-8") as f:
         content = f.read()
-
+        
     # 匹配任务复选框
     total_tasks = len(re.findall(r"- 
-
-\[.\]
-
-", content))
+    
+    \[.\]
+    
+    ", content))
     completed_tasks = len(re.findall(r"- 
+    
+    \[x\]
+    
+    ", content, re.IGNORECASE))
 
-\[x\]
-
-", content, re.IGNORECASE))
 
     # 计算进度
     remaining_tasks = total_tasks - completed_tasks
