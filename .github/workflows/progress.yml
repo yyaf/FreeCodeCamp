@@ -1,0 +1,36 @@
+name: Update Progress
+
+on:
+  push:
+    paths:
+      - "readme.md"
+  workflow_dispatch:  # 手动触发
+
+jobs:
+  update-progress:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Run progress script
+        run: python progress.py > progress_output.txt
+
+      - name: Update readme.md
+        run: |
+          echo "## 自动更新进度统计" >> readme.md
+          cat progress_output.txt >> readme.md
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add progress.md
+          git commit -m "Update readme stats"
+          git push
