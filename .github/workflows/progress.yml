@@ -5,6 +5,8 @@ on:
     paths:
       - "readme.md"
   workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"  # 每天凌晨自动运行一次
 
 jobs:
   update-progress:
