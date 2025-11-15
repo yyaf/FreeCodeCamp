@@ -1,6 +1,6 @@
 import re
 
-def calculate_progress(md_file):
+def update_progress(md_file="readme.md"):
     # 读取 Markdown 文件
     with open(md_file, "r", encoding="utf-8") as f:
         content = f.read()
@@ -26,12 +26,28 @@ def calculate_progress(md_file):
     filled_length = int(bar_length * completed_tasks // total_tasks)
     bar = "█" * filled_length + "░" * (bar_length - filled_length)
 
-    # 输出结果
-    print(f"总任务数：{total_tasks}")
-    print(f"已完成：{completed_tasks}")
-    print(f"剩余：{remaining_tasks}")
-    print(f"完成率：{completion_rate:.2f}%")
-    print(f"[{bar}] 完成率：{completion_rate:.2f}%")
+    # 构建进度统计文本
+    progress_text = (
+        "## 学习进度统计\n\n"
+        f"- 总任务数：{total_tasks}\n"
+        f"- 已完成：{completed_tasks}\n"
+        f"- 剩余：{remaining_tasks}\n"
+        f"- 完成率：{completion_rate:.2f}%\n\n"
+        f"### 可视化进度条\n"
+        f"[{bar}] 完成率：{completion_rate:.2f}%\n"
+    )
 
-# 使用方法：把你的 Markdown 打卡表保存为 readme.md，然后运行：
-# calculate_progress("readme.md")
+    # 替换或追加进度统计部分
+    if "## 学习进度统计" in content:
+        content = re.sub(r"## 学习进度统计[\\s\\S]*?(?=\\n#|\\Z)", progress_text, content)
+    else:
+        content += "\n\n" + progress_text
+
+    # 写回文件
+    with open(md_file, "w", encoding="utf-8") as f:
+        f.write(content)
+
+    print("✅ 已更新 readme.md 中的进度统计表！")
+
+# 使用方法：
+# update_progress("readme.md")
