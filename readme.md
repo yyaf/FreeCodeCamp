@@ -6,9 +6,10 @@
 - 已完成：2
 
 ## 阶段 1：网页开发基础（第 1–12 周）
+
 - [x] 第 1 周：HTML 基础（标签、结构，完成 Introduction to HTML）
 - [x] 第 2 周：HTML 表单与语义化（完成 HTML Forms 模块）
-- [ ] 第 3 周：CSS 基础（选择器、颜色、字体）
+- [x] 第 3 周：CSS 基础（选择器、颜色、字体）
 - [ ] 第 4 周：CSS 布局（Flexbox、Grid）
 - [ ] 第 5 周：响应式设计（媒体查询、流式布局）
 - [ ] 第 6 周：可访问性（Applied Accessibility）
@@ -20,6 +21,7 @@
 - [ ] 第 12 周：总结与复盘（提交 Responsive Web Design 认证）
 
 ## 阶段 2：JavaScript 编程（第 13–24 周）
+
 - [ ] 第 13 周：JS 基础（变量、函数、数组、对象）
 - [ ] 第 14 周：JS 控制结构（循环、条件语句）
 - [ ] 第 15 周：ES6 基础（箭头函数、解构赋值）
@@ -34,6 +36,7 @@
 - [ ] 第 24 周：项目实践（待办清单或计算器）
 
 ## 阶段 3：前端框架（第 25–36 周）
+
 - [ ] 第 25 周：React 基础（组件、props、状态）
 - [ ] 第 26 周：React 事件处理
 - [ ] 第 27 周：React Hooks（useState、useEffect）
@@ -48,6 +51,7 @@
 - [ ] 第 36 周：完成 Front End Development Libraries 认证
 
 ## 阶段 4：后端与全栈（第 37–52 周）
+
 - [ ] 第 37 周：Node.js 基础（模块、路由）
 - [ ] 第 38 周：Express 框架（REST API、中间件）
 - [ ] 第 39 周：MongoDB 基础（CRUD）
