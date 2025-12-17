@@ -10,7 +10,7 @@
 - [x] 第 1 周：HTML 基础（标签、结构，完成 Introduction to HTML）
 - [x] 第 2 周：HTML 表单与语义化（完成 HTML Forms 模块）
 - [x] 第 3 周：CSS 基础（选择器、颜色、字体）
-- [ ] 第 4 周：CSS 布局（Flexbox、Grid）
+- [x] 第 4 周：CSS 布局（Flexbox、Grid）
 - [ ] 第 5 周：响应式设计（媒体查询、流式布局）
 - [ ] 第 6 周：可访问性（Applied Accessibility）
 - [ ] 第 7 周：CSS 动画（过渡、关键帧）
